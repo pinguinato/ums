@@ -1,0 +1,48 @@
+body{
+    font-family: 'Noto Sans', 'Helvetica', sans-serif;
+}
+
+main > .container {
+    padding: 60px 15px 0;
+}
+
+.footer {
+    background-color: #f5f5f5;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+code {
+    font-size: 80%;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+#searchForm label{
+    color:#fff;
+    padding-right: 5px;
+}
+#searchForm .form-control{
+    padding: 5px;
+}
+
+.pagination li.active .page-link {
+    cursor: default;
+}
+
