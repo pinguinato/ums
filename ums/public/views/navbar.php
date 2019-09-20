@@ -25,6 +25,7 @@ $pageUrl = $_SERVER['PHP_SELF'];
                 </li>
             </ul>
             <form class="form-inline mt-2 mt-md-0" action="<?php echo $pageUrl ?>" id="searchForm" method="get">
+                <input type="hidden" name="page" id="page" value="<?=$page?>">
                 <div class="formGroup">
                     <label for="recordsPerPage">ORDER BY</label>
                     <select name="orderBy" id="orderBy" onchange="document.forms.searchForm.submit()">
@@ -45,7 +46,7 @@ $pageUrl = $_SERVER['PHP_SELF'];
                 </div>&nbsp;
                 <div class="formGroup">
                     <label for="recordsPerPage">RECORDS PER PAGE</label>
-                    <select name="recordsPerPage" id="recordsPerPage" onchange="document.forms.searchForm.submit()">
+                    <select name="recordsPerPage" id="recordsPerPage" onchange="document.forms.searchForm.page.value=1;document.forms.searchForm.submit()">
                         <option value="">SELECT</option>
                         <?php
                         foreach ($recordsPerPageOptions as $val) {
@@ -58,7 +59,7 @@ $pageUrl = $_SERVER['PHP_SELF'];
                 <input class="form-control mr-sm-2" type="text"
                        placeholder="Search" aria-label="Search" name="search" id="search"
                        value="<?php echo $search; ?>">&nbsp;
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>&nbsp;
+                <button onclick="document.forms.searchForm.page.value=1" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>&nbsp;
                 <button class="btn btn-outline-warning my-2 my-sm-0" type="button"
                         onclick="location.href='<?= $pageUrl ?>'">RESET
                 </button>
